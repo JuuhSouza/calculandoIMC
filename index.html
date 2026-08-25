@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -8,8 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indice de Massa Corporal</title>
 </head>
+
 <body>
-    
+
     <h1>IMC - Indice de Massa Corporal</h1>
 
     <form action="" data-aos="fade-down">
@@ -29,34 +31,33 @@
 
     <script>
         //peso e altura
-        function calcularImc(){
+        function calcularImc() {
             const peso = document.getElementById('peso').value;
             const altura = document.getElementById('altura').value;
             const imc = peso / (altura ** 2);
             document.getElementById('resultado').textContent = imc.toFixed(2); //tofixed escolhar a quantidade de numeros aparecendo
 
-        var resultado = ""; 
+            var resultado = "";
 
-        if (imc < 18.5){
-            resultado = " Baixo peso";
-        } else if (imc <= 24.9){
-            resultado = " Normal";
-        } else if (imc >= 25){
-            resultado = " Sobrepeso";
-        } else {
-            resultado = "obesidade"
-        } document.getElementById('resultado').textContent += resultado;
+            if (imc < 18.5) {
+                resultado = " Baixo peso";
+            } else if (imc <= 24.9) {
+                resultado = " Normal";
+            } else if (imc >= 25) {
+                resultado = " Sobrepeso";
+            } else {
+                resultado = "obesidade"
+            } document.getElementById('resultado').textContent += resultado;
 
         }
-       
-
     </script>
 
     <footer> Desenvolvido por Júlia Souza | 2024</footer>
 
-<script>
-    AOS.init();
-  </script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
+
 </html>
